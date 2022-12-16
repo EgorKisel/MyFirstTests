@@ -102,4 +102,9 @@ class MainActivity : AppCompatActivity(), ViewSearchContract {
     companion object {
         const val BASE_URL = "https://api.github.com"
     }
+
+    override fun onDestroy() {
+        presenter.onDetach()
+        super.onDestroy()
+    }
 }

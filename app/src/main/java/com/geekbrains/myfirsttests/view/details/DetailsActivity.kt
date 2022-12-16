@@ -47,4 +47,9 @@ class DetailsActivity : AppCompatActivity(), ViewDetailsContract {
             }
         }
     }
+
+    override fun onDestroy() {
+        presenter.onDetach()
+        super.onDestroy()
+    }
 }
