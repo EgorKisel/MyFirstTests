@@ -1,15 +1,16 @@
 package com.geekbrains.myfirsttests.repository
 
 import com.geekbrains.myfirsttests.model.SearchResponse
+import com.geekbrains.myfirsttests.presenter.RepositoryContract
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-internal class GitHubRepository(private val gitHubApi: GitHubApi) {
+internal class GitHubRepository(private val gitHubApi: GitHubApi) : RepositoryContract {
 
-    fun searchGithub(
+    override fun searchGithub(
         query: String,
-        callBack: GitHubRepositoryCallback
+        callBack: RepositoryCallback
     ) {
         val call = gitHubApi.searchGithub(query)
         call?.enqueue(object : Callback<SearchResponse?> {
@@ -25,10 +26,5 @@ internal class GitHubRepository(private val gitHubApi: GitHubApi) {
             }
 
         })
-    }
-
-    interface GitHubRepositoryCallback {
-        fun handleGitHubResponse(response: Response<SearchResponse?>?)
-        fun handleGitHubError()
     }
 }
