@@ -32,5 +32,12 @@ class OpenOtherAppsTest {
 
         val settingsValidation = uiDevice.findObject(UiSelector().packageName("com.android.settings"))
         Assert.assertTrue(settingsValidation.exists())
+
+        val textUiSelector: UiSelector = UiSelector().scrollable(true)
+        UiScrollable(textUiSelector).getChildByText(textUiSelector, "System")
+
+        val systemUiObject = uiDevice.findObject(UiSelector().text("System"))
+        Assert.assertTrue(systemUiObject.exists())
+        systemUiObject.clickAndWaitForNewWindow()
     }
 }
