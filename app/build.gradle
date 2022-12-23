@@ -85,4 +85,7 @@ dependencies {
         exclude group: 'org.jetbrains.kotlin'
         exclude group: 'org.mockito'
     }
+
+    //UI Automator
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
 }
