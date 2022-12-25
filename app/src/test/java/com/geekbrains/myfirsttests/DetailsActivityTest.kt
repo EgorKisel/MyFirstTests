@@ -119,9 +119,8 @@ class DetailsActivityTest {
 
     @Test
     fun activityCreateIntent_HasCount() {
-        val count = 42
-        val intent = DetailsActivity.getIntent(context, count)
+        val intent = DetailsActivity.getIntent(context, TEST_NUMBER)
         val bundle = intent.extras
-        TestCase.assertEquals(count, bundle?.getInt(DetailsActivity.TOTAL_COUNT_EXTRA, 0))
+        TestCase.assertEquals(TEST_NUMBER, bundle?.getInt(DetailsActivity.TOTAL_COUNT_EXTRA, 0))
     }
 }
