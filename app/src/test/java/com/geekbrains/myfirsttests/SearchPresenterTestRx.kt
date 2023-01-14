@@ -3,7 +3,7 @@ package com.geekbrains.myfirsttests
 import com.geekbrains.myfirsttests.model.SearchResponse
 import com.geekbrains.myfirsttests.presenter.search.SearchPresenter
 import com.geekbrains.myfirsttests.repository.GitHubRepository
-import com.geekbrains.myfirsttests.stubs.ScheduleProviderStub
+import com.geekbrains.myfirsttests.presenter.search.ScheduleProviderStub
 import com.geekbrains.myfirsttests.view.search.ViewSearchContract
 import io.reactivex.Observable
 import org.junit.Before
