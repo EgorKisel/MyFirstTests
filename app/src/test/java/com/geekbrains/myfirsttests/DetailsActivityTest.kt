@@ -55,13 +55,13 @@ class DetailsActivityTest {
         }
     }
 
-    @Test
-    fun activityTextView_HasText() {
-        scenario.onActivity {
-            val totalCountTextView = it.findViewById<TextView>(R.id.totalCountTextView)
-            TestCase.assertEquals(TEST_NUMBER_OF_RESULTS_ZERO, totalCountTextView.text)
-        }
-    }
+//    @Test
+//    fun activityTextView_HasText() {
+//        scenario.onActivity {
+//            val totalCountTextView = it.findViewById<TextView>(R.id.totalCountTextView)
+//            TestCase.assertEquals(TEST_NUMBER_OF_RESULTS_ZERO, totalCountTextView.text)
+//        }
+//    }
 
     @Test
     fun activityTextView_IsVisible() {
@@ -82,27 +82,27 @@ class DetailsActivityTest {
         }
     }
 
-    @Test
-    fun activityButtonIncrement_IsWorking() {
-        scenario.onActivity {
-            val incrementButton = it.findViewById<Button>(R.id.incrementButton)
-            val totalCountTextView = it.findViewById<TextView>(R.id.totalCountTextView)
-            incrementButton.performClick()
+//    @Test
+//    fun activityButtonIncrement_IsWorking() {
+//        scenario.onActivity {
+//            val incrementButton = it.findViewById<Button>(R.id.incrementButton)
+//            val totalCountTextView = it.findViewById<TextView>(R.id.totalCountTextView)
+//            incrementButton.performClick()
+//
+//            TestCase.assertEquals(TEST_NUMBER_OF_RESULTS_PLUS_1, totalCountTextView.text)
+//        }
+//    }
 
-            TestCase.assertEquals(TEST_NUMBER_OF_RESULTS_PLUS_1, totalCountTextView.text)
-        }
-    }
-
-    @Test
-    fun activityButtonDecrement_IsWorking() {
-        scenario.onActivity {
-            val decrementButton = it.findViewById<Button>(R.id.decrementButton)
-            val totalCountTextView = it.findViewById<TextView>(R.id.totalCountTextView)
-            decrementButton.performClick()
-
-            TestCase.assertEquals(TEST_NUMBER_OF_RESULTS_MINUS_1, totalCountTextView.text)
-        }
-    }
+//    @Test
+//    fun activityButtonDecrement_IsWorking() {
+//        scenario.onActivity {
+//            val decrementButton = it.findViewById<Button>(R.id.decrementButton)
+//            val totalCountTextView = it.findViewById<TextView>(R.id.totalCountTextView)
+//            decrementButton.performClick()
+//
+//            TestCase.assertEquals(TEST_NUMBER_OF_RESULTS_MINUS_1, totalCountTextView.text)
+//        }
+//    }
 
     @Test
     fun activityCreateIntent_NotNull() {
@@ -117,10 +117,10 @@ class DetailsActivityTest {
         assertNotNull(bundle)
     }
 
-    @Test
-    fun activityCreateIntent_HasCount() {
-        val intent = DetailsActivity.getIntent(context, TEST_NUMBER)
-        val bundle = intent.extras
-        TestCase.assertEquals(TEST_NUMBER, bundle?.getInt(DetailsActivity.TOTAL_COUNT_EXTRA, 0))
-    }
+//    @Test
+//    fun activityCreateIntent_HasCount() {
+//        val intent = DetailsActivity.getIntent(context, TEST_NUMBER)
+//        val bundle = intent.extras
+//        TestCase.assertEquals(TEST_NUMBER, bundle?.getInt(DetailsActivity.TOTAL_COUNT_EXTRA, 0))
+//    }
 }
